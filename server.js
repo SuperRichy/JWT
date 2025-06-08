@@ -51,9 +51,7 @@ app.get("/protected", verifyToken, (req, res) => {
   return res.status(200).json({ message: "Acceso permitido", usuario: req.username });
 });
 
-//
-// CRUD de Clientes (protegido con JWT)
-//
+
 
 // Crear cliente
 app.post("/clientes", verifyToken, (req, res) => {
